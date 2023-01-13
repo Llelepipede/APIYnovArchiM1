@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,13 +25,21 @@ namespace APIYnovArchiM1.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
+          if (_context.Users == null)
+          {
+              return NotFound();
+          }
             return await _context.Users.ToListAsync();
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id, [FromQuery] string name)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
+          if (_context.Users == null)
+          {
+              return NotFound();
+          }
             var user = await _context.Users.FindAsync(id);
 
             if (user == null)
@@ -76,8 +84,12 @@ namespace APIYnovArchiM1.Controllers
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser([FromBody] User user)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
+          if (_context.Users == null)
+          {
+              return Problem("Entity set 'ArchiDbContext.Users'  is null.");
+          }
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
@@ -88,6 +100,10 @@ namespace APIYnovArchiM1.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
+            if (_context.Users == null)
+            {
+                return NotFound();
+            }
             var user = await _context.Users.FindAsync(id);
             if (user == null)
             {
@@ -102,7 +118,7 @@ namespace APIYnovArchiM1.Controllers
 
         private bool UserExists(int id)
         {
-            return _context.Users.Any(e => e.ID == id);
+            return (_context.Users?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }
