@@ -4,6 +4,7 @@ using APIYnovArchiM1.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIYnovArchiM1.Migrations
 {
     [DbContext(typeof(ArchiDbContext))]
-    partial class ArchiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230120111536_fixed_tag")]
+    partial class fixed_tag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

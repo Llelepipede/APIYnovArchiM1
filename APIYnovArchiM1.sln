@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIYnovArchiM1", "APIYnovArchiM1\APIYnovArchiM1.csproj", "{C3D57456-7F3D-44DF-8C0F-A7D138DEB1B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIYnovArchiM1", "APIYnovArchiM1\APIYnovArchiM1.csproj", "{C3D57456-7F3D-44DF-8C0F-A7D138DEB1B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi", "TestApi\TestApi.csproj", "{2430E30C-4C8C-4771-8B8E-CC4FC4F4DD78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C3D57456-7F3D-44DF-8C0F-A7D138DEB1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3D57456-7F3D-44DF-8C0F-A7D138DEB1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3D57456-7F3D-44DF-8C0F-A7D138DEB1B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2430E30C-4C8C-4771-8B8E-CC4FC4F4DD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2430E30C-4C8C-4771-8B8E-CC4FC4F4DD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2430E30C-4C8C-4771-8B8E-CC4FC4F4DD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2430E30C-4C8C-4771-8B8E-CC4FC4F4DD78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
