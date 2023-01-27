@@ -9,6 +9,8 @@ namespace APIYnovArchiM1.Models
         [ForeignKey("IDRace")]
         public int IDRace { get; set; }
 
+        public int Order { get; set; }
+
         public string? QrcodeName { get; set; }
 
     }
