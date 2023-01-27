@@ -1,12 +1,15 @@
-﻿namespace APIYnovArchiM1.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace APIYnovArchiM1.Models
 {
     public class Tag
     {
         public int ID { get; set; }
 
-        public byte[]? QrCode { get; set; }
+        [ForeignKey("IDRace")]
+        public int IDRace { get; set; }
 
-        public int Latitude { get; set; }
-        public int Longitude { get; set; }
+        public string? QrcodeName { get; set; }
+
     }
 }
